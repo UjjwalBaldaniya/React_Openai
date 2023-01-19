@@ -1,0 +1,167 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 6rem;
+}
+
+.navbar-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
+}
+
+.navbar-link_logo {
+    margin-right: 2rem;
+}
+
+.navbar-link_logo img {
+    width: 62px;
+    height: 16px;
+}
+
+.navbar-link_container {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar-signin {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navbar-link_container p,
+.navbar-signin p {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin: 0 1rem;
+    line-height: 25px;
+    font-family: var(--font-family);
+    cursor: pointer;
+}
+
+.navbar-signin button {
+    color: white;
+    background-color: #ff4820;
+    padding: 0.5rem 1rem;
+    font-size: 18px;
+    font-weight: 500px;
+    line-height: 25px;
+    font-family: var(--font-family);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.navbar-menu {
+    margin-left: 1rem;
+    display: none;
+    position: relative;
+}
+
+.navbar-menu svg {
+    color: white;
+    cursor: pointer;
+}
+
+/* <---------------------------------------2ND MENU ICONS CSS -------------------------------------->*/
+
+.navbar-menu_container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+
+    background: var(--color-footer);
+    position: absolute;
+    min-width: 210px;
+    top: 40px;
+    right: 0px;
+    text-align: end;
+    padding: 2rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 5 rgba(0, 0, 0, 0.2);
+}
+
+.navbar-menu_container-link p {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin: 1rem 0;
+    line-height: 25px;
+    font-family: var(--color-text);
+    cursor: pointer;
+}
+
+
+.navbar-menu_container-link-signin {
+    display: none;
+}
+
+.navbar-menu_container-link-signin p {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin: 1rem 0;
+    line-height: 25px;
+    font-family: var(--color-text);
+    cursor: pointer;
+}
+
+.navbar-menu_container-link-signin button {
+    color: white;
+    background-color: #ff4820;
+    padding: 0.5rem 1rem;
+    font-size: 18px;
+    font-weight: 500px;
+    line-height: 25px;
+    font-family: var(--color-text);
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+/* <--------------------------------------- MEDIA QUARY -------------------------------------->*/
+
+@media screen and (max-width: 1050px) {
+    .navbar-link_container {
+        display: none;
+    }
+
+    .navbar-menu {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .navbar {
+        padding: 2rem 4rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .navbar {
+        padding: 2rem;
+    }
+
+    .navbar-signin {
+        display: none;
+    }
+
+    .navbar-menu_container {
+        top: 20px;
+    }
+
+    .navbar-menu_container-link-signin {
+        display: block;
+    }
+}
